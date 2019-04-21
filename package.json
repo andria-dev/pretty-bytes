@@ -12,7 +12,8 @@
   "scripts": {
     "build": "microbundle --raw",
     "dev": "microbundle -w --raw",
-    "test": "pnpm run build && ava"
+    "test": "ava",
+    "test:watch": "ava --watch"
   },
   "keywords": [],
   "author": "",

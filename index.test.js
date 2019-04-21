@@ -1,26 +1,30 @@
 import test from 'ava';
 import { format } from './dist/index.js';
 
+global.navigator = {
+  language: 'en'
+};
+
 test.only('Numbers are correctly converted to their type every 1024 of the last size', t => {
   const values = [
     ['1', 'B', 'bytes'],
-    ['1023', 'B', 'bytes'],
+    ['1,023', 'B', 'bytes'],
     ['1', 'KiB', 'kibibytes'],
-    ['1023', 'KiB', 'kibibytes'],
+    ['1,023', 'KiB', 'kibibytes'],
     ['1', 'MiB', 'mebibytes'],
-    ['1023', 'MiB', 'mebibytes'],
+    ['1,023', 'MiB', 'mebibytes'],
     ['1', 'GiB', 'gibibytes'],
-    ['1023', 'GiB', 'gibibytes'],
+    ['1,023', 'GiB', 'gibibytes'],
     ['1', 'TiB', 'tebibytes'],
-    ['1023', 'TiB', 'tebibytes'],
+    ['1,023', 'TiB', 'tebibytes'],
     ['1', 'PiB', 'pebibytes'],
-    ['1023', 'PiB', 'pebibytes'],
+    ['1,023', 'PiB', 'pebibytes'],
     ['1', 'EiB', 'exbibytes'],
-    ['1023', 'EiB', 'exbibytes'],
+    ['1,023', 'EiB', 'exbibytes'],
     ['1', 'ZiB', 'zebibytes'],
-    ['1023', 'ZiB', 'zebibytes'],
+    ['1,023', 'ZiB', 'zebibytes'],
     ['1', 'YiB', 'yobibytes'],
-    ['1023', 'YiB', 'yobibytes']
+    ['1,023', 'YiB', 'yobibytes']
   ];
 
   for (let index = 0; index < values.length; ++index) {
@@ -33,7 +37,7 @@ test.only('Numbers are correctly converted to their type every 1024 of the last 
       number = 1024 ** (index + 1) - 1024 ** index;
     }
 
-    t.deepEqual(format(number), values[index]);
+    t.deepEqual(format(number), values[index], `${number}`);
   }
 });
 
