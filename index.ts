@@ -11,13 +11,20 @@ const UNITS = [
 ];
 
 export function format(size: number, locale = 'en') {
+  // Make negative numbers positive
+  const prefix = size < 0 ? '-' : '';
+  size = Math.abs(size);
+
   // We are solving for `x` in this equation: 1024^x = size
   // log2(size)/log2(1024) === log2(size)/10 === log1024(size)
-  const magnitude = Math.min(Math.floor(Math.log2(size) / 10), UNITS.length);
+  const magnitude = Math.min(
+    Math.floor(Math.log2(size || 1) / 10),
+    UNITS.length
+  );
 
   const formattedSize = parseFloat(
-    (size / 1024 ** magnitude).toFixed(3)
+    (size / 1024 ** magnitude || 0).toFixed(3)
   ).toLocaleString(locale);
 
-  return [formattedSize, ...UNITS[magnitude]];
+  return [prefix + formattedSize, ...UNITS[magnitude]];
 }
