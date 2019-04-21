@@ -1,0 +1,24 @@
+{
+  "name": "@chbphone55/pretty-bytes",
+  "version": "1.0.0",
+  "description": "",
+  "source": "index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "microbundle --raw",
+    "dev": "microbundle -w --raw",
+    "test": "pnpm run build && ava"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^1.4.1",
+    "microbundle": "^0.11.0"
+  }
+}
