@@ -10,7 +10,7 @@ const UNITS = [
   ['YiB', 'yobibytes']
 ];
 
-export function format(size: number, locale = navigator.language) {
+export function format(size: number, locale = 'en') {
   // We are solving for `x` in this equation: 1024^x = size
   // log2(size)/log2(1024) === log2(size)/10 === log1024(size)
   const magnitude = Math.min(Math.floor(Math.log2(size) / 10), UNITS.length);

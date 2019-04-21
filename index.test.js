@@ -1,10 +1,6 @@
 import test from 'ava';
 import { format } from './dist/index.js';
 
-global.navigator = {
-  language: 'en'
-};
-
 test.only('Numbers are correctly converted to their type every 1024 of the last size', t => {
   const values = [
     ['1', 'B', 'bytes'],
