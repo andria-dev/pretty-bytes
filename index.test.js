@@ -37,6 +37,13 @@ test('Numbers are correctly converted to their type every 1024 of the last size'
   }
 });
 
-test('Negative numbers should be treated like positive ones', t => {});
+test('Negative numbers and 0 should be treated like positive ones', t => {
+  t.deepEqual(format(0), ['0', 'B', 'bytes'], '0 should result in 0 bytes');
+  t.deepEqual(
+    format(-1),
+    ['-1', 'B', 'bytes'],
+    'Negative numbers should be treated the same'
+  );
+});
 
 test('Custom locale support', t => {});
