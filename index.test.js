@@ -46,4 +46,7 @@ test('Negative numbers and 0 should be treated like positive ones', t => {
   );
 });
 
-test('Custom locale support', t => {});
+test('Custom locale support', t => {
+  t.is(format(1000)[0], '1,000', 'Defaults to English');
+  t.is(format(1000, 'es')[0], '1.000', 'Allows overriding of locale');
+});
