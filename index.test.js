@@ -3,24 +3,24 @@ import { format } from './dist/index.js';
 
 test.only('Numbers are correctly converted to their type every 1024 of the last size', t => {
   const values = [
-    ['1', 'B', 'Bytes'],
-    ['1023', 'B', 'Bytes'],
-    ['1', 'KiB', 'Kibibytes'],
-    ['1023', 'KiB', 'Kibibytes'],
-    ['1', 'MiB', 'Mebibytes'],
-    ['1023', 'MiB', 'Mebibytes'],
-    ['1', 'GiB', 'Gibibytes'],
-    ['1023', 'GiB', 'Gibibytes'],
-    ['1', 'TiB', 'Tebibytes'],
-    ['1023', 'TiB', 'Tebibytes'],
-    ['1', 'PiB', 'Pebibytes'],
-    ['1023', 'PiB', 'Pebibytes'],
-    ['1', 'EiB', 'Exbibytes'],
-    ['1023', 'EiB', 'Exbibytes'],
-    ['1', 'ZiB', 'Zebibytes'],
-    ['1023', 'ZiB', 'Zebibytes'],
-    ['1', 'YiB', 'Yobibytes'],
-    ['1023', 'YiB', 'Yobibytes']
+    ['1', 'B', 'bytes'],
+    ['1023', 'B', 'bytes'],
+    ['1', 'KiB', 'kibibytes'],
+    ['1023', 'KiB', 'kibibytes'],
+    ['1', 'MiB', 'mebibytes'],
+    ['1023', 'MiB', 'mebibytes'],
+    ['1', 'GiB', 'gibibytes'],
+    ['1023', 'GiB', 'gibibytes'],
+    ['1', 'TiB', 'tebibytes'],
+    ['1023', 'TiB', 'tebibytes'],
+    ['1', 'PiB', 'pebibytes'],
+    ['1023', 'PiB', 'pebibytes'],
+    ['1', 'EiB', 'exbibytes'],
+    ['1023', 'EiB', 'exbibytes'],
+    ['1', 'ZiB', 'zebibytes'],
+    ['1023', 'ZiB', 'zebibytes'],
+    ['1', 'YiB', 'yobibytes'],
+    ['1023', 'YiB', 'yobibytes']
   ];
 
   for (let index = 0; index < values.length; ++index) {
