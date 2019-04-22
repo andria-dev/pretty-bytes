@@ -33,7 +33,6 @@
     "localization",
     "localized"
   ],
-  "author": "",
   "license": "MIT",
   "devDependencies": {
     "ava": "^1.4.1",
