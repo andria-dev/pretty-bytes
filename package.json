@@ -14,7 +14,8 @@
     "dev": "microbundle -w --raw",
     "test": "ava",
     "test:watch": "ava --watch",
-    "test:publish": "e2e-verdaccio"
+    "test:publish": "e2e-verdaccio",
+    "publish": "npm publish --access public"
   },
   "keywords": [
     "pretty",
