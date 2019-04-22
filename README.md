@@ -7,7 +7,7 @@ Format sizes from bytes to human readable strings
 > 1032192 → ['1,008', 'KiB', 'kibibytes']
 > ```
 
-_Note that this package uses base-2 (e.g. kibibyte) so every 1024 bytes is 1 KiB and 1024 KiB is 1 MiB. [Read about the difference between kilobyte and kibibyte.](https://web.archive.org/web/20150324153922/https://pacoup.com/2009/05/26/kb-kb-kib-whats-up-with-that/)_
+_Note that this package uses base-2 (e.g. kibibyte) so every 1024 bytes is 1 KiB and every 1024 KiB is 1 MiB. [Read about the difference between kilobyte and kibibyte.](https://web.archive.org/web/20150324153922/https://pacoup.com/2009/05/26/kb-kb-kib-whats-up-with-that/)_
 
 ## Usage
 
