@@ -16,7 +16,23 @@
     "test:watch": "ava --watch",
     "test:publish": "e2e-verdaccio"
   },
-  "keywords": [],
+  "keywords": [
+    "pretty",
+    "format",
+    "beautify",
+    "bytes",
+    "byte",
+    "filesize",
+    "size",
+    "file",
+    "human",
+    "humanized",
+    "readable",
+    "data",
+    "locale",
+    "localization",
+    "localized"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
