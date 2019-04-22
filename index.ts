@@ -1,4 +1,27 @@
-const UNITS = [
+export namespace Units {
+  export type short =
+    | 'B'
+    | 'KiB'
+    | 'MiB'
+    | 'GiB'
+    | 'TiB'
+    | 'PiB'
+    | 'EiB'
+    | 'ZiB'
+    | 'YiB';
+  export type long =
+    | 'bytes'
+    | 'kibibytes'
+    | 'mebibytes'
+    | 'gibibytes'
+    | 'tebibytes'
+    | 'pebibytes'
+    | 'exbibytes'
+    | 'zebibytes'
+    | 'yobibytes';
+}
+
+export const UNITS: Array<[Units.short, Units.long]> = [
   ['B', 'bytes'],
   ['KiB', 'kibibytes'],
   ['MiB', 'mebibytes'],
@@ -10,7 +33,10 @@ const UNITS = [
   ['YiB', 'yobibytes']
 ];
 
-export function format(size: number, locale = 'en') {
+export function format(
+  size: number,
+  locale: string = 'en'
+): [string, Units.short, Units.long] {
   // Make negative numbers positive
   const prefix = size < 0 ? '-' : '';
   size = Math.abs(size);
@@ -26,5 +52,9 @@ export function format(size: number, locale = 'en') {
     (size / 1024 ** magnitude || 0).toFixed(3)
   ).toLocaleString(locale);
 
-  return [prefix + formattedSize, ...UNITS[magnitude]];
+  return [prefix + formattedSize, ...UNITS[magnitude]] as [
+    string,
+    Units.short,
+    Units.long
+  ];
 }
