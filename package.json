@@ -1,7 +1,7 @@
 {
   "name": "@chbphone55/pretty-bytes",
   "version": "1.0.0",
-  "description": "",
+  "description": "Format sizes from bytes to human readable strings",
   "source": "index.ts",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
