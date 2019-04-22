@@ -13,13 +13,15 @@
     "build": "microbundle --raw",
     "dev": "microbundle -w --raw",
     "test": "ava",
-    "test:watch": "ava --watch"
+    "test:watch": "ava --watch",
+    "test:publish": "e2e-verdaccio"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "ava": "^1.4.1",
+    "e2e-verdaccio": "^1.0.0",
     "microbundle": "^0.11.0"
   }
 }

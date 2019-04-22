@@ -1,5 +1,6 @@
 devDependencies:
   ava: 1.4.1
+  e2e-verdaccio: localhost+4873/e2e-verdaccio/1.0.0
   microbundle: 0.11.0
 lockfileVersion: 5
 packages:
@@ -5889,6 +5890,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-VCIyR1wJoEBZUqk5PA+oOBF6ypbwh5aNB3I50guxAL/quggdfs4TtNHQrSazFA3fYZ+tEqfs0zIGlv0c/rgjbQ==
+  localhost+4873/e2e-verdaccio/1.0.0:
+    dev: true
+    hasBin: true
+    name: e2e-verdaccio
+    os:
+      - '!win32'
+    resolution:
+      integrity: sha512-uHon6zEr7uXNLFh4nNHabKk3cQsaYU3g6XcxrBr49OZa16MF7rJB2AUrgLikSnv74LZIfEEj33TFIPRJUR4y9Q==
+      registry: 'http://localhost:4873/'
+      tarball: 'http://localhost:4873/e2e-verdaccio/-/e2e-verdaccio-1.0.0.tgz'
+    version: 1.0.0
 specifiers:
   ava: ^1.4.1
+  e2e-verdaccio: ^1.0.0
   microbundle: ^0.11.0
