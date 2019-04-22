@@ -10,6 +10,40 @@ _Note that this package uses base-2 (e.g. kibibyte) [Read about the difference b
 
 ### Install
 
+To install the package, use a package manager to access the NPM registry.
+
+```bash
+pnpm install @chbphone55/pretty-bytes
+
+# or
+
+yarn add @chbphone55/pretty-bytes
 ```
 
+### Import
+
+The function is exported as `format`.
+
+```js
+import { format } from '@chbphone55/pretty-bytes';
+
+// or
+
+const { format } = require('@chbphone55/pretty-bytes');
+```
+
+### Example
+
+To use `format`, pass it the size of your file in bytes. Optionally, you can pass in a locale as the second argument. _The locale defaults to `en`._
+
+```js
+```
+
+### API
+
+```ts
+format(
+  size: number,
+  locale?: string = 'en'
+): [string, Units.short, Units.long]
 ```
