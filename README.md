@@ -57,15 +57,25 @@ format(1041332);
 
 format(1041332, 'es');
 // => ['1.016,926', 'KiB', 'kibibytes']
+
+// You can also use `navigator.language`
+format(1041332, navigator.language);
 ```
 
 ### API
 
 ```ts
 format(
+  // The number to format
   size: number,
+  // The locale to use with `.toLocaleString()`
   locale?: string = 'en'
 ): [string, Units.short, Units.long]
+
+namespace Units {
+  type short = 'B' | 'KiB' | 'MiB' | 'GiB' | 'TiB' | 'PiB' | 'EiB' | 'ZiB' | 'YiB';
+  type long = 'bytes' | 'kibibytes' | 'mebibytes' | 'gibibytes' | 'tebibytes' | 'pebibytes' | 'exbibytes' | 'zebibytes' | 'yobibytes';
+}
 ```
 
 ## License
