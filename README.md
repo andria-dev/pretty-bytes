@@ -80,4 +80,4 @@ namespace Units {
 
 ## License
 
-MIT © 2019 [Christopher H. Brown](https://chrisbrown.netlify.com)
+MIT © 2019-2023 Andria Brown
